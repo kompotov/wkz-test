@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+
+    public function toggleState(): bool
+    {
+        $this->state = !$this->state;
+        return $this->state;
+    }
 }
