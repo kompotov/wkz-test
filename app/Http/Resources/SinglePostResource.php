@@ -20,6 +20,7 @@ class SinglePostResource extends JsonResource
             'description' => $this->description,
             'text' => $this->text,
             'state' => $this->state ? 'Active' : 'Hidden',
+            'createdAt' => $this->created_at->format('Y-m-d H:i:s')
         ];
     }
 }
