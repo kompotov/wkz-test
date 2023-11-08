@@ -3,18 +3,13 @@
 namespace Api;
 
 use App\Models\Post;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\Response;
 use Tests\TestCase;
 
 class NewsControllerTest extends TestCase
 {
-    use DatabaseTransactions;
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-    }
+    use RefreshDatabase;
 
     public function testIndexMethod(): void
     {

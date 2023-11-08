@@ -24,6 +24,10 @@ Run **migrations** with **seeder**
 ```
 vendor/bin/sail artisan migrate --seed
 ```
+Install frontend dependencies
+```
+vendor/bin/sail npm install
+```
 Build assets
 ```
 vendor/bin/sail npm run build
@@ -31,7 +35,7 @@ vendor/bin/sail npm run build
 
 
 ## Usage
-Then you can access website by this link http://127.0.0.1
+Then you can access website by this link http://127.0.0.1/news
 
 Run tests
 ```
