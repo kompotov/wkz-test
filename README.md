@@ -24,6 +24,10 @@ Run **migrations** with **seeder**
 ```
 vendor/bin/sail artisan migrate --seed
 ```
+Build assets
+```
+vendor/bin/sail npm run build
+```
 
 
 ## Usage
