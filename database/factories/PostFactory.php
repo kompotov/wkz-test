@@ -17,13 +17,17 @@ class PostFactory extends Factory
      */
     public function definition(): array
     {
+        $date = $this->faker->dateTimeBetween('-1 year')->format('Y-m-d H:i:s');
         return [
             'title' => fake()->text(64),
             'description' => fake()->text(512),
             'text' => fake()->text(1024),
-            'state' => fake()->boolean()
+            'state' => fake()->boolean(),
+            'created_at' => $date,
+            'updated_at' => $date
         ];
     }
+
 
     public function configure(): static
     {

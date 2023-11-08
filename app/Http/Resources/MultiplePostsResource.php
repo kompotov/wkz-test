@@ -19,6 +19,7 @@ class MultiplePostsResource extends JsonResource
             'url' => $this->url,
             'title' => $this->title,
             'description' => $this->description,
+            'createdAt' => $this->created_at->format('Y-m-d H:i:s')
         ];
     }
 }
