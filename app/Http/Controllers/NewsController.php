@@ -27,6 +27,6 @@ class NewsController extends Controller
     {
         $post->toggleState();
         $post->save();
-        return response()->json(['new-state' => $post->state]);
+        return response()->json(['new-state' => $post->state], Response::HTTP_PARTIAL_CONTENT);
     }
 }

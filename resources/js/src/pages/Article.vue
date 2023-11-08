@@ -11,7 +11,14 @@ export default defineComponent({
     },
     mounted() {
         axios.get('/api/news/' + this.$route.params.article)
-            .then(response => this.article = response.data.data);
+            .then(response => {
+                this.article = response.data.data
+            })
+            .catch(error => {
+                if (error.response.status === 404) {
+                    return this.$router.push({name: '404'})
+                }
+            });
     },
     methods: {
         toggleState() {

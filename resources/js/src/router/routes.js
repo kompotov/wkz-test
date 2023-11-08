@@ -1,5 +1,6 @@
 import News from '@/pages/News.vue';
 import Article from '@/pages/Article.vue';
+import NotFound from "@/pages/NotFound.vue";
 
 const routes = [
     {
@@ -12,6 +13,11 @@ const routes = [
         name: 'article',
         component: Article
     },
+    {
+        path: '/:pathMatch(.*)*',
+        name: '404',
+        component: NotFound
+    }
 ];
 
 export default routes;
