@@ -15,7 +15,11 @@ export default defineComponent({
     <div class="col">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">{{ newsItem.title }}</h5>
+                <h5 class="card-title">
+                    <router-link :to="{name: 'article', params: { article: newsItem.id }}">
+                        {{ newsItem.title }}
+                    </router-link>
+                </h5>
                 <p class="card-text">{{ newsItem.description.substring(0, 150) + '...' }}</p>
                 <router-link :to="{name: 'article', params: { article: newsItem.id }}" class="card-link">
                     Read Article
